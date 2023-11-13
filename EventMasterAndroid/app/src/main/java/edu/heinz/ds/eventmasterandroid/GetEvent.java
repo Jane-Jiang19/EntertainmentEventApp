@@ -157,50 +157,7 @@ public class GetEvent {
 
             return responseBody;
         }
-        /*
-         * Search Flickr.com for the searchTerm argument, and return a Bitmap that can be put in an ImageView
-         */
-//        private Bitmap search(String searchTerm) {
-//            System.out.println("BackgroundTask.search");
-//            System.out.println(Thread.currentThread().getThreadGroup().getName());
-//            String pictureURL = null;
-//            // Debugging:
-//            //System.out.println("Search, searchTerm = " + searchTerm);
-//            // Add your Flickr key inside the quotes:
-//            String api_key = "8dc35f333b6e8836c89110c1d35a7147";
-//            // Call Flickr to get the web page containing image URL's of the search term
-//            Document doc =
-//                    getRemoteXML("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=" +
-//                            api_key+
-//                            "&is_getty=true&tags="+searchTerm);
-//
-//            // Get the photo element
-//            NodeList nl = doc.getElementsByTagName("photo");
-//            if (nl.getLength() == 0) {
-//                return null; // no pictures found
-//            } else {
-//                int pic = new Random().nextInt(nl.getLength()); //choose a random picture
-//                Element e = (Element) nl.item(pic);
-//                String farm = e.getAttribute("farm");
-//                String server = e.getAttribute("server");
-//                String id = e.getAttribute("id");
-//                String secret = e.getAttribute("secret");
-//                // Note: http will fail in the search method, but gives an
-//                //    error on the BitMapFactory call (???)
-//                pictureURL = "https://farm"+farm+".static.flickr.com/"+server+"/"+id+"_"+secret+"_z.jpg";
-//            }
-//            // At this point, we have the URL of the picture that resulted from the search.  Now load the image itself.
-//            try {
-//                URL u = new URL(pictureURL);
-//                // Debugging:
-//                //System.out.println(pictureURL);
-//                return getRemoteImage(u);
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//                return null; // so compiler does not complain
-//            }
-//
-//        }
+        
 
         /*
          * Given a url that will request XML, return a Document with that XML, else null
